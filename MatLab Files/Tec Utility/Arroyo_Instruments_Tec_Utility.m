@@ -30,7 +30,10 @@ end
 % "/dev/tty.usbserial-AR0KM0M8"
 
 % On Windows you might get soothing similar to this:
-% 
+% "COM3"
+% From device manager you can also find the port number
+% Look for "USB Serial Port (COM3)"
+% The number will vary between computers
 
 % Set your device variables equal to the ports
 dev1 = 6; % Port number of device 1
@@ -52,10 +55,6 @@ device1 = serialport(port_list(dev1), 38400)
 writeline(device1, "*idn?");
 dev1idn = readline(device1);
 fprintf("Device 1: %s", dev1idn)
-
-% writeline(device2, "*idn?");
-% dev2idn = readline(device2);
-% fprintf("Device 1: %s", dev2idn)
 
 
 
