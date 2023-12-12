@@ -1,16 +1,19 @@
 # MatLab_Demo_Files
 
-This repository contains MATLAB scripts for controlling and monitoring Arroyo Instruments' Laser and TEC devices.
+This repository contains MATLAB scripts for controlling and monitoring Arroyo Instruments' Laser and TEC devices. This is here to help you get started with your Arroyo Instruments device in MATLAB. Feel free to use and modify these scripts as you see fit. There are two versions of each script: a broader compatibility version and a live version. The broader compatibility version should work with any modern version of MATLAB. The live version is a MATLAB Live Script, which is only viewable and editable in MATLAb. The live version is more user-friendly and has section breaks for incrementally running the script.
 
 ## Directory Structure
 
+- `MatLab Files/`: Contains all of the MATLAB scripts
+    - `Laser Utility/`: Contains the Laser Utility scripts
+    - `Tec Utility/`: Contains the TEC Utility scripts
 
 ## Laser Utility
 
 The Laser Utility scripts are located in the `MatLab Files/Laser Utility/` directory. 
 
 - `Arroyo_Instruments_Laser_Utility.m`: Broader compatibility version
-- `Arroyo_Instruments_Tec_Utility_Live.mlx`: Live version of the TEC Utility
+- `Arroyo_Instruments_Laser_Utility_Live.mlx`: Live version of the Laser Utility
 
 ### Laser Utility Features
 
@@ -75,13 +78,21 @@ The TEC Utility scripts are located in the `MatLab Files/Tec Utility/` directory
 
     - Log data until stable.
 
-    - Calculate Rtec? TEC power?
 
 ## Usage
 
 To use these scripts, you need to ...
 
+
 ## Requirements
 
 - These scripts should work with any modern version of MATLAB.
 These scripts require that your PC has USB access to one of Arroyo Instruments' Laser or TEC devices.
+
+## Troubleshooting
+
+- If you are having trouble connecting to your device, make sure that you have the correct COM port selected in the script.
+
+- If you are having trouble connecting and you are using a USB hub, try connecting directly to your PC.
+
+- If you are having trouble connecting and you are using a USB 3.0 port, try connecting to a USB 2.0 port.
