@@ -81,7 +81,11 @@ The TEC Utility scripts are located in the `MatLab Files/Tec Utility/` directory
 
 ## Usage
 
-To use these scripts, you need to ...
+    - Open scripts in to MATLAB
+
+    - Connect your Arroyo Instuments device
+
+    - Experiment with code
 
 
 ## Requirements
