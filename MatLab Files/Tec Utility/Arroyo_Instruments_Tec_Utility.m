@@ -95,7 +95,7 @@ polling_frequency = 10; %Hz
 % Configure acquisition length in seconds
 acquisition_length = 5; %sec
 
-% Data lables for cell array
+% Data labels for cell array
 recorded_values = {"time",  "voltage",  "current",  "temp",  "resistance"};
 
 figure(1)
@@ -106,7 +106,7 @@ hold(vct_plot, "on");
 
 % Begin reading data
 for readings = 1:(polling_frequency*acquisition_length)
-    % Querey and recieve time, voltage, current, temperature, and resistance
+    % Query and receive time, voltage, current, temperature, and resistance
     writeline(device1, "time?;tec:v?;ite?;t?;r?");
     raw_data = readline(device1);
 
@@ -151,7 +151,7 @@ title(vct_plot, "voltage, current, temperature versus time");
 xlabel(vct_plot, "Time");
 xtickangle(vct_plot, 45);
 xtickformat(vct_plot,"auto")
-legend(vct_plot, "Voltage (V)", "Current(A)", "Temperature(Celcius)");
+legend(vct_plot, "Voltage (V)", "Current(A)", "Temperature(Celsius)");
 
 
 
@@ -179,8 +179,8 @@ polling_frequency = 10; %Hz
 % Changing the Tset
 Tset = 30;
 
-% Data lables for cell array
-tol_recorded_values = {"time",  "voltage",  "current",  "temp",  "resistance", "tolerence"};
+% Data labels for cell array
+tol_recorded_values = {"time",  "voltage",  "current",  "temp",  "resistance", "tolerance"};
 
 figure(2)
 tol_plot = axes();
@@ -199,7 +199,7 @@ out_tol = 1;
 % Begin reading data
 while out_tol
     pause(1/polling_frequency)
-    % Querey and recieve time, voltage, current, temperature, and resistance
+    % Query and receive time, voltage, current, temperature, and resistance
     writeline(device1, "time?;tec:v?;ite?;t?;r?;cond?");
     raw_data = readline(device1);
 
@@ -247,7 +247,7 @@ title(tol_plot, "voltage, current, temperature versus time");
 xlabel(tol_plot, "Time");
 xtickangle(tol_plot, 45);
 xtickformat(tol_plot,"auto")
-legend(tol_plot, "Voltage (V)", "Current(A)", "Temperature(Celcius)");
+legend(tol_plot, "Voltage (V)", "Current(A)", "Temperature(Celsius)");
 
 
 % ----------------------------------------------------------------------------------------------------------------------------------------
@@ -285,8 +285,8 @@ polling_frequency = 1; %Hz
 % Changing the Tset
 Tset = min_temp;
 
-% Data lables for cell array
-ramp_recorded_values = {"time",  "voltage",  "current",  "temp",  "resistance", "tolerence"};
+% Data labels for cell array
+ramp_recorded_values = {"time",  "voltage",  "current",  "temp",  "resistance", "tolerance"};
 
 figure(3)
 ramp_plot = axes();
@@ -363,4 +363,4 @@ title(ramp_plot, "voltage, current, temperature versus time");
 xlabel(ramp_plot, "Time");
 xtickangle(ramp_plot, 45);
 xtickformat(ramp_plot,"auto")
-legend(ramp_plot, "Voltage (V)", "Current(A)", "Temperature(Celcius)");
+legend(ramp_plot, "Voltage (V)", "Current(A)", "Temperature(Celsius)");

@@ -103,7 +103,7 @@ polling_frequency = 1; %Hz
 % Configure acquisition length in seconds
 acquisition_length = 5; %sec
 
-% Data lables for cell array
+% Data labels for cell array
 recorded_values = {"time",  "current",  "voltage",  "diode current",  "diode power"};
 
 figure(1)
@@ -114,7 +114,7 @@ hold(ivd_plot, "on");
 
 % Begin reading data
 for readings = 1:(polling_frequency*acquisition_length)
-    % Querey and recieve time, current, voltage, diode current, and diode power
+    % Query and receive time, current, voltage, diode current, and diode power
     writeline(device1, "time?;las:i?;ldv?;mdi?;mdp?");
     raw_data = readline(device1);
 
@@ -188,7 +188,7 @@ dwell_time = 0.1; %seconds
 % Changing the Iset
 Iset = min_i;
 
-% Data lables for cell array
+% Data labels for cell array
 LVI_values = {"time",  "current",  "voltage",  "diode current",  "diode power", "Iset"};
 
 figure(2)
